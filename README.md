@@ -54,8 +54,8 @@ Nenhum código deve ser commitado diretamente nas branchs fixas (`main`, `stagin
   git checkout -b feature/nome-da-funcionalidade
 ```
 3. Faça commits seguindo a convenção de **Conventional Commits** (ex: `feat: add jwt configuration`).
-4. Ao concluir a feature ou correção de bug, abra um Pull Request apontado para a branch develop
+4. Ao concluir a feature ou correção de bug, abra um Pull Request apontado para a branch develop.
 ```bash
    git push -u origin feature/nome-da-funcionalidade
 ```
-5. Aguarde a execução da pipeline e revisão de outro desenvolvedor para mergear seu codigo a branch develop
+5. Aguarde a execução da pipeline e revisão de outro desenvolvedor para integrar seu codigo a branch develop.
