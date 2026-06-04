@@ -6,37 +6,31 @@ Com base na proposta do projeto e nas diretrizes de arquitetura definidas no rep
 
 Este repositório contém a **API REST principal** do ecossistema de Gestão de Finanças Pessoais com Inteligência de Dados. Desenvolvida em **NestJS** e **TypeScript**, esta aplicação é responsável por centralizar as regras de negócio, autenticação, controle de acessos, persistência de dados e a orquestração da comunicação com o microserviço de Inteligência Artificial.
 
-## 🚀 Tecnologias e Ferramentas Utilizadas
+## Tecnologias e Ferramentas Utilizadas
 
-* 
-**Framework:** NestJS (TypeScript) 
-
-
-* 
-**ORM:** Prisma ORM 
+* **Framework:** NestJS (TypeScript) 
 
 
-* 
-**Banco de Dados:** PostgreSQL 
+* **ORM:** Prisma ORM 
 
 
-* 
-**Documentação da API:** Swagger ou Scalar 
+* **Banco de Dados:** PostgreSQL 
 
 
-* 
-**Disparo de E-mails:** Mailtrap 
+* **Documentação da API:** Swagger ou Scalar 
 
 
-* 
-**Integração CMS:** Prismic CMS (gerenciamento de artigos e categorias) 
+* **Disparo de E-mails:** Mailtrap 
+
+
+* **Integração CMS:** Prismic CMS (gerenciamento de artigos e categorias) 
 
 
 * **Ambiente de Desenvolvimento:** Docker (para containerização do banco de dados)
 
 ---
 
-## 🏗️ Arquitetura e Papel no Ecossistema
+## Arquitetura e Papel no Ecossistema
 
 Como parte de uma arquitetura de microserviços, o Backend Principal atua como uma camada intermediária (orquestradora) entre a interface do usuário e o motor de IA.
 
@@ -47,26 +41,22 @@ Como parte de uma arquitetura de microserviços, o Backend Principal atua como u
 
 ### Principais Responsabilidades:
 
-* 
-**Autenticação e Autorização:** Controle de acesso seguro diferenciando perfis de *Administrador* e *Usuário Comum*.
+* **Autenticação e Autorização:** Controle de acesso seguro diferenciando perfis de *Administrador* e *Usuário Comum*.
 
 
-* 
-**Gestão Transacional:** Lógica de cálculo de saldos, fluxo de receitas/despesas e acúmulo de metas financeiras.
+* **Gestão Transacional:** Lógica de cálculo de saldos, fluxo de receitas/despesas e acúmulo de metas financeiras.
 
 
-* 
-**Integração de Serviços:** Consumo de dados analíticos e predições do microserviço Python e consumo de artigos do Prismic CMS.
+* **Integração de Serviços:** Consumo de dados analíticos e predições do microserviço Python e consumo de artigos do Prismic CMS.
 
 
-* 
-**Notificações:** Disparo de alertas automáticos de orçamentos estourados através do Mailtrap.
+* **Notificações:** Disparo de alertas automáticos de orçamentos estourados através do Mailtrap.
 
 
 
 ---
 
-## 🛠️ Funcionalidades Implementadas (Escopo da API)
+## Funcionalidades Implementadas (Escopo da API)
 
 ### 1. Autenticação e Usuários (Módulo 1 & 2)
 
@@ -118,7 +108,7 @@ Como parte de uma arquitetura de microserviços, o Backend Principal atua como u
 
 ---
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
 Antes de iniciar, certifique-se de ter instalado em sua máquina:
 
@@ -190,7 +180,7 @@ A API estará disponível em `http://localhost:3000`.
 
 ---
 
-## 📖 Documentação da API
+## Documentação da API
 
 A documentação interativa dos endpoints está disponível através do **Swagger**. Com a aplicação rodando em ambiente de desenvolvimento, acesse:
 
@@ -200,7 +190,7 @@ Aqui você encontrará a descrição de todas as rotas, parâmetros necessários
 
 ---
 
-## 🌿 Fluxo de Trabalho do Git (Git Flow)
+## Fluxo de Trabalho do Git (Git Flow)
 
 Seguimos rigidamente a estratégia de branches definida no ecossistema central:
 
