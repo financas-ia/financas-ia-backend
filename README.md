@@ -1,7 +1,3 @@
-Com base na proposta do projeto e nas diretrizes de arquitetura definidas no repositório centralizador, aqui está um modelo completo de **README.md** estruturado especificamente para o repositório do **Backend Principal (`gestao-financas-backend`)**.
-
----
-
 # Sistema de Gestão de Finanças Pessoais - Backend Principal (`gestao-financas-backend`)
 
 Este repositório contém a **API REST principal** do ecossistema de Gestão de Finanças Pessoais com Inteligência de Dados. Desenvolvida em **NestJS** e **TypeScript**, esta aplicação é responsável por centralizar as regras de negócio, autenticação, controle de acessos, persistência de dados e a orquestração da comunicação com o microserviço de Inteligência Artificial.
