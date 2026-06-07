@@ -2,7 +2,7 @@ name: Pipeline-financas-ia-backend
 
 on:
   pull_request:
-    branches: [develop]
+    branches: [staging]
 
 jobs:
   security-check:
