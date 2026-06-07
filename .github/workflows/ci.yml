@@ -5,7 +5,22 @@ on:
     branches: [develop]
 
 jobs:
+  security-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout project code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for leaked secrets
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   run-tests:
+    needs: security-check
     runs-on: ubuntu-latest
 
     steps:
@@ -16,9 +31,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
           
       - name: Install dependencies
         run: npm ci
+
+      - name: Audit dependencies for vulnerabilities
+        run: npm audit --audit-level=high
 
       - name: Run build
         run: npm run build
