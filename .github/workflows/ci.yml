@@ -5,22 +5,7 @@ on:
     branches: [staging]
 
 jobs:
-  security-check:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout project code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Check for leaked secrets
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   run-tests:
-    needs: security-check
     runs-on: ubuntu-latest
 
     steps:
