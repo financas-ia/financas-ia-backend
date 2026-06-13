@@ -12,6 +12,4 @@ export class MailService {
             html: "teste2"
         })
     }
-
-    //teste copilot
 }
