@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsString, Length, Matches, } from "class-validator";
+import { IsEmail, IsNotEmpty, IsString, Length, Matches, IsDateString} from "class-validator";
 
 export class CreateUserDto {
     @IsNotEmpty({message: 'Name is required'})
@@ -22,7 +22,7 @@ export class CreateUserDto {
     @Matches(/[!@#$%^&*(),.?":{}|<>]/, { message: 'A senha deve conter pelo menos um caractere especial' })
     password!: string;
 
-    @IsString()
+    @IsDateString()
     @IsNotEmpty({message: 'Date of birth is required'})
     date_of_birth!: Date;
 

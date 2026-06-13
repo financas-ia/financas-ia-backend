@@ -11,8 +11,8 @@ dotenv.config();
 export class PrismaService extends PrismaClient implements OnModuleInit, OnModuleDestroy {
   
   constructor() {
+    const connectionString = process.env.DATABASE_URL;
     const pool = new Pool({ 
-      connectionString: process.env.DATABASE_URL || "postgresql://financas_user:financas_password@localhost:5433/financas_gestao?schema=public" 
     });
     const adapter = new PrismaPg(pool);
     super({ adapter });
