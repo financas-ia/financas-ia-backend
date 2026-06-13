@@ -11,15 +11,10 @@ dotenv.config();
 export class PrismaService extends PrismaClient implements OnModuleInit, OnModuleDestroy {
   
   constructor() {
-    // 1. Criamos a piscina de conexões nativa do driver 'pg' usando a sua URL
     const pool = new Pool({ 
       connectionString: process.env.DATABASE_URL || "postgresql://financas_user:financas_password@localhost:5433/financas_gestao?schema=public" 
     });
-    
-    // 2. Instanciamos o adaptador oficial do Prisma para o PostgreSQL
     const adapter = new PrismaPg(pool);
-
-    // 3. Passamos o adaptador para o super(). O TS e o Prisma vão amar isso!
     super({ adapter });
   }
 

@@ -7,4 +7,4 @@ import { PrismaService } from './prisma.service';
   providers: [PrismaService],
   exports: [PrismaService],
 })
-export class PrismaModule {} // 🟢 Verifique se este nome está EXATAMENTE assim, com o "Module" no final!
+export class PrismaModule {}
