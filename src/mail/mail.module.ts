@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { MailerModule, MailerService } from "@nestjs-modules/mailer";
+import { MailerModule} from "@nestjs-modules/mailer";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { MailService } from "./mail.service";
 
@@ -7,7 +7,7 @@ import { MailService } from "./mail.service";
     imports: [
         MailerModule.forRootAsync({
             imports: [ConfigModule],
-            useFactory: async (configService: ConfigService) => ({
+            useFactory: (configService: ConfigService) => ({
                 transport: {
                     host: configService.get<string>('MAIL_TRAP_HOST'),
                     port: configService.get<number>('MAIL_TRAP_PORT'),
