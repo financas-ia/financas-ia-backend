@@ -6,9 +6,9 @@ services:
     container_name: financas_postgres
     restart: always
     environment:
-      POSTGRES_USER: financas_user
-      POSTGRES_PASSWORD: financas_password
-      POSTGRES_DB: financas_gestao
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_HOST}
     ports:
       - "5433:5432"
     volumes:
