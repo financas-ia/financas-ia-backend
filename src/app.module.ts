@@ -8,7 +8,13 @@ import { ConfigModule } from '@nestjs/config';
   imports: [MailModule, ConfigModule.forRoot({
     isGlobal: true,
   })],
+import { UsersModule } from './users/users.module';
+import { UsersService } from './users/users.service';
+import { PrismaModule } from './prisma/prisma.module';
+
+@Module({
+  imports: [UsersModule, PrismaModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, UsersService],
 })
 export class AppModule {}
